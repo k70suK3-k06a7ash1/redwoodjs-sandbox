@@ -1,13 +1,13 @@
-import type { FindPosts, FindPostsVariables } from 'types/graphql'
+import type { FindPosts, FindPostsVariables } from "types/graphql";
 
-import { Link, routes } from '@redwoodjs/router'
+import { Link, routes } from "@redwoodjs/router";
 import type {
-  CellSuccessProps,
-  CellFailureProps,
-  TypedDocumentNode,
-} from '@redwoodjs/web'
+	CellSuccessProps,
+	CellFailureProps,
+	TypedDocumentNode,
+} from "@redwoodjs/web";
 
-import Posts from 'src/components/Post/Posts'
+import Posts from "src/components/Post/Posts";
 
 export const QUERY: TypedDocumentNode<FindPosts, FindPostsVariables> = gql`
   query FindPosts {
@@ -18,27 +18,27 @@ export const QUERY: TypedDocumentNode<FindPosts, FindPostsVariables> = gql`
       createdAt
     }
   }
-`
+`;
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div>Loading...</div>;
 
 export const Empty = () => {
-  return (
-    <div className="rw-text-center">
-      {'No posts yet. '}
-      <Link to={routes.newPost()} className="rw-link">
-        {'Create one?'}
-      </Link>
-    </div>
-  )
-}
+	return (
+		<div className="rw-text-center">
+			{"No posts yet. "}
+			<Link to={routes.newPost()} className="rw-link">
+				{"Create one?"}
+			</Link>
+		</div>
+	);
+};
 
 export const Failure = ({ error }: CellFailureProps<FindPosts>) => (
-  <div className="rw-cell-error">{error?.message}</div>
-)
+	<div className="rw-cell-error">{error?.message}</div>
+);
 
 export const Success = ({
-  posts,
+	posts,
 }: CellSuccessProps<FindPosts, FindPostsVariables>) => {
-  return <Posts posts={posts} />
-}
+	return <Posts posts={posts} />;
+};

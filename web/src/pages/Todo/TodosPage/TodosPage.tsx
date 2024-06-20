@@ -1,7 +1,7 @@
-import TodosCell from 'src/components/Todo/TodosCell'
+import TodosCell from "src/components/Todo/TodosCell";
 
 const TodosPage = () => {
-  return <TodosCell />
-}
+	return <TodosCell />;
+};
 
-export default TodosPage
+export default TodosPage;

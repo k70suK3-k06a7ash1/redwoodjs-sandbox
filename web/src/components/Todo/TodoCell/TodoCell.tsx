@@ -1,17 +1,15 @@
-import type { FindTodoById, FindTodoByIdVariables } from 'types/graphql'
+import type { FindTodoById, FindTodoByIdVariables } from "types/graphql";
 
 import type {
-  CellSuccessProps,
-  CellFailureProps,
-  TypedDocumentNode,
-} from '@redwoodjs/web'
+	CellSuccessProps,
+	CellFailureProps,
+	TypedDocumentNode,
+} from "@redwoodjs/web";
 
-import Todo from 'src/components/Todo/Todo'
+import Todo from "src/components/Todo/Todo";
 
-export const QUERY: TypedDocumentNode<
-  FindTodoById,
-  FindTodoByIdVariables
-> = gql`
+export const QUERY: TypedDocumentNode<FindTodoById, FindTodoByIdVariables> =
+	gql`
   query FindTodoById($id: Int!) {
     todo: todo(id: $id) {
       id
@@ -21,18 +19,18 @@ export const QUERY: TypedDocumentNode<
       createdAt
     }
   }
-`
+`;
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div>Loading...</div>;
 
-export const Empty = () => <div>Todo not found</div>
+export const Empty = () => <div>Todo not found</div>;
 
 export const Failure = ({ error }: CellFailureProps<FindTodoByIdVariables>) => (
-  <div className="rw-cell-error">{error?.message}</div>
-)
+	<div className="rw-cell-error">{error?.message}</div>
+);
 
 export const Success = ({
-  todo,
+	todo,
 }: CellSuccessProps<FindTodoById, FindTodoByIdVariables>) => {
-  return <Todo todo={todo} />
-}
+	return <Todo todo={todo} />;
+};

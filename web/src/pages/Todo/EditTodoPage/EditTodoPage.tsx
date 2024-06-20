@@ -1,11 +1,11 @@
-import EditTodoCell from 'src/components/Todo/EditTodoCell'
+import EditTodoCell from "src/components/Todo/EditTodoCell";
 
 type TodoPageProps = {
-  id: number
-}
+	id: number;
+};
 
 const EditTodoPage = ({ id }: TodoPageProps) => {
-  return <EditTodoCell id={id} />
-}
+	return <EditTodoCell id={id} />;
+};
 
-export default EditTodoPage
+export default EditTodoPage;

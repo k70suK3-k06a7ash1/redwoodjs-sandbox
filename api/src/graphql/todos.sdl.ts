@@ -29,4 +29,4 @@ export const schema = gql`
     updateTodo(id: Int!, input: UpdateTodoInput!): Todo! @requireAuth
     deleteTodo(id: Int!): Todo! @requireAuth
   }
-`
+`;

@@ -1,35 +1,35 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Loading, Empty, Failure, Success } from './ExampleTodosCell'
-import { standard } from './ExampleTodosCell.mock'
+import { Loading, Empty, Failure, Success } from "./ExampleTodosCell";
+import { standard } from "./ExampleTodosCell.mock";
 
 const meta: Meta = {
-  title: 'Cells/ExampleTodosCell',
-  tags: ['autodocs'],
-}
+	title: "Cells/ExampleTodosCell",
+	tags: ["autodocs"],
+};
 
-export default meta
+export default meta;
 
 export const loading: StoryObj<typeof Loading> = {
-  render: () => {
-    return Loading ? <Loading /> : <></>
-  },
-}
+	render: () => {
+		return Loading ? <Loading /> : <></>;
+	},
+};
 
 export const empty: StoryObj<typeof Empty> = {
-  render: () => {
-    return Empty ? <Empty /> : <></>
-  },
-}
+	render: () => {
+		return Empty ? <Empty /> : <></>;
+	},
+};
 
 export const failure: StoryObj<typeof Failure> = {
-  render: (args) => {
-    return Failure ? <Failure error={new Error('Oh no')} {...args} /> : <></>
-  },
-}
+	render: (args) => {
+		return Failure ? <Failure error={new Error("Oh no")} {...args} /> : <></>;
+	},
+};
 
 export const success: StoryObj<typeof Success> = {
-  render: (args) => {
-    return Success ? <Success {...standard()} {...args} /> : <></>
-  },
-}
+	render: (args) => {
+		return Success ? <Success {...standard()} {...args} /> : <></>;
+	},
+};

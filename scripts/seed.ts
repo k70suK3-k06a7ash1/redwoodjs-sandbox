@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { db } from 'api/src/lib/db'
+import { db } from "api/src/lib/db";
 
 // Manually apply seeds via the `yarn rw prisma db seed` command.
 //
@@ -9,20 +9,20 @@ import { db } from 'api/src/lib/db'
 // See https://redwoodjs.com/docs/database-seeds for more info
 
 export default async () => {
-  try {
-    // Create your database records here! For example, seed some users:
-    //
-    // const users = [
-    //   { name: 'Alice', email: 'alice@redwoodjs.com },
-    //   { name: 'Bob', email: 'bob@redwoodjs.com },
-    // ]
-    //
-    // await db.user.createMany({ data: users })
+	try {
+		// Create your database records here! For example, seed some users:
+		//
+		// const users = [
+		//   { name: 'Alice', email: 'alice@redwoodjs.com },
+		//   { name: 'Bob', email: 'bob@redwoodjs.com },
+		// ]
+		//
+		// await db.user.createMany({ data: users })
 
-    console.info(
-      '\n  No seed data, skipping. See scripts/seed.ts to start seeding your database!\n'
-    )
-  } catch (error) {
-    console.error(error)
-  }
-}
+		console.info(
+			"\n  No seed data, skipping. See scripts/seed.ts to start seeding your database!\n",
+		);
+	} catch (error) {
+		console.error(error);
+	}
+};

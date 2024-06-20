@@ -1,7 +1,7 @@
-import NewTodo from 'src/components/Todo/NewTodo'
+import NewTodo from "src/components/Todo/NewTodo";
 
 const NewTodoPage = () => {
-  return <NewTodo />
-}
+	return <NewTodo />;
+};
 
-export default NewTodoPage
+export default NewTodoPage;

@@ -1,17 +1,15 @@
-import type { FindPostById, FindPostByIdVariables } from 'types/graphql'
+import type { FindPostById, FindPostByIdVariables } from "types/graphql";
 
 import type {
-  CellSuccessProps,
-  CellFailureProps,
-  TypedDocumentNode,
-} from '@redwoodjs/web'
+	CellSuccessProps,
+	CellFailureProps,
+	TypedDocumentNode,
+} from "@redwoodjs/web";
 
-import Post from 'src/components/Post/Post'
+import Post from "src/components/Post/Post";
 
-export const QUERY: TypedDocumentNode<
-  FindPostById,
-  FindPostByIdVariables
-> = gql`
+export const QUERY: TypedDocumentNode<FindPostById, FindPostByIdVariables> =
+	gql`
   query FindPostById($id: Int!) {
     post: post(id: $id) {
       id
@@ -20,18 +18,18 @@ export const QUERY: TypedDocumentNode<
       createdAt
     }
   }
-`
+`;
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div>Loading...</div>;
 
-export const Empty = () => <div>Post not found</div>
+export const Empty = () => <div>Post not found</div>;
 
 export const Failure = ({ error }: CellFailureProps<FindPostByIdVariables>) => (
-  <div className="rw-cell-error">{error?.message}</div>
-)
+	<div className="rw-cell-error">{error?.message}</div>
+);
 
 export const Success = ({
-  post,
+	post,
 }: CellSuccessProps<FindPostById, FindPostByIdVariables>) => {
-  return <Post post={post} />
-}
+	return <Post post={post} />;
+};

@@ -1,41 +1,41 @@
 import type {
-  ExamplePostsQuery,
-  ExamplePostsQueryVariables,
-} from 'types/graphql'
+	ExamplePostsQuery,
+	ExamplePostsQueryVariables,
+} from "types/graphql";
 
 import type {
-  CellSuccessProps,
-  CellFailureProps,
-  TypedDocumentNode,
-} from '@redwoodjs/web'
+	CellSuccessProps,
+	CellFailureProps,
+	TypedDocumentNode,
+} from "@redwoodjs/web";
 
 export const QUERY: TypedDocumentNode<
-  ExamplePostsQuery,
-  ExamplePostsQueryVariables
+	ExamplePostsQuery,
+	ExamplePostsQueryVariables
 > = gql`
   query ExamplePostsQuery {
     examplePosts {
       id
     }
   }
-`
+`;
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div>Loading...</div>;
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => <div>Empty</div>;
 
 export const Failure = ({ error }: CellFailureProps) => (
-  <div style={{ color: 'red' }}>Error: {error?.message}</div>
-)
+	<div style={{ color: "red" }}>Error: {error?.message}</div>
+);
 
 export const Success = ({
-  examplePosts,
+	examplePosts,
 }: CellSuccessProps<ExamplePostsQuery>) => {
-  return (
-    <ul>
-      {examplePosts.map((item) => {
-        return <li key={item.id}>{JSON.stringify(item)}</li>
-      })}
-    </ul>
-  )
-}
+	return (
+		<ul>
+			{examplePosts.map((item) => {
+				return <li key={item.id}>{JSON.stringify(item)}</li>;
+			})}
+		</ul>
+	);
+};

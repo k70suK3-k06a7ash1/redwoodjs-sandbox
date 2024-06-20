@@ -1,11 +1,11 @@
-import TodoCell from 'src/components/Todo/TodoCell'
+import TodoCell from "src/components/Todo/TodoCell";
 
 type TodoPageProps = {
-  id: number
-}
+	id: number;
+};
 
 const TodoPage = ({ id }: TodoPageProps) => {
-  return <TodoCell id={id} />
-}
+	return <TodoCell id={id} />;
+};
 
-export default TodoPage
+export default TodoPage;
