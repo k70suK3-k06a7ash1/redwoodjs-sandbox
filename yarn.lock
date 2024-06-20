@@ -9180,6 +9180,7 @@ __metadata:
   resolution: "api@workspace:api"
   dependencies:
     "@redwoodjs/api": "npm:7.7.1"
+    "@redwoodjs/api-server": "npm:7.7.1"
     "@redwoodjs/auth-dbauth-api": "npm:7.7.1"
     "@redwoodjs/graphql-server": "npm:7.7.1"
     "@simplewebauthn/server": "npm:^7"
@@ -24245,6 +24246,7 @@ __metadata:
     "@redwoodjs/router": "npm:7.7.1"
     "@redwoodjs/vite": "npm:7.7.1"
     "@redwoodjs/web": "npm:7.7.1"
+    "@redwoodjs/web-server": "npm:7.7.1"
     "@simplewebauthn/browser": "npm:^7"
     "@types/react": "npm:^18.2.55"
     "@types/react-dom": "npm:^18.2.19"

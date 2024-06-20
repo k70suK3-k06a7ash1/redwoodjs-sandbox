@@ -1,7 +1,10 @@
 {
 	"private": true,
 	"workspaces": {
-		"packages": ["api", "web"]
+		"packages": [
+			"api",
+			"web"
+		]
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.1",
