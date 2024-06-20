@@ -19,8 +19,16 @@ const Routes = () => {
 			<Route path="/home" page={HomePage} name="home" />
 			<Route path="/login" page={LoginPage} name="login" />
 			<Route path="/signup" page={SignupPage} name="signup" />
-			<Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
-			<Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
+			<Route
+				path="/forgot-password"
+				page={ForgotPasswordPage}
+				name="forgotPassword"
+			/>
+			<Route
+				path="/reset-password"
+				page={ResetPasswordPage}
+				name="resetPassword"
+			/>
 			<Route path="/sample" page={SamplePage} name="sample" />
 			<Set
 				wrap={ScaffoldLayout}
