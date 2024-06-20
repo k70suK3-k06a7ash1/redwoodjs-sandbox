@@ -1,3 +1,10 @@
+# Premise
+```bash
+npm install -g yarn
+```
+
+if your current yarn version is 4, go to next step
+
 # README
 
 Welcome to [RedwoodJS](https://redwoodjs.com)!
