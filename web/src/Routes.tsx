@@ -16,6 +16,7 @@ import { useAuth } from './auth'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
+      <Route path="/sample" page={SamplePage} name="sample" />
       <Set wrap={ScaffoldLayout} title="Todos" titleTo="todos" buttonLabel="New Todo" buttonTo="newTodo">
         <Route path="/todos/new" page={TodoNewTodoPage} name="newTodo" />
         <Route path="/todos/{id:Int}/edit" page={TodoEditTodoPage} name="editTodo" />
