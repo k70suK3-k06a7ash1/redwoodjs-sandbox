@@ -8,9 +8,8 @@
 pre-commit:
   commands:
     lint:
-      root: web/
       glob: "*.{ts,tsx}"
-      run: yarn biome format --write .
+      run: yarn biome format --write ./web/.
 
 # pre-push:
 #   commands:
