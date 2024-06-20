@@ -21,6 +21,6 @@ const App = () => (
 			</AuthProvider>
 		</RedwoodProvider>
 	</FatalErrorBoundary>
-)
+);
 
 export default App;
